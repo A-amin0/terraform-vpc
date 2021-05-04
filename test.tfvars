@@ -1,0 +1,6 @@
+region="us-east-1"
+access_key="<add access_key here>"
+secret_key="<add secret_key here>"
+instance_type="t2.micro"
+ami="ami-0be2609ba883822ec"
+instance_name="test-instance"
