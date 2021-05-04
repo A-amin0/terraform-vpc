@@ -1,4 +1,5 @@
 # creates a vpc, subnet, igw, route table and sg
+
 resource "aws_vpc" "test-vpc" {
   cidr_block       = "10.0.0.0/16"
   instance_tenancy = "default"
@@ -29,9 +30,7 @@ resource "aws_route_table" "test-public-route-table" {
   vpc_id = "${aws_vpc.test-vpc.id}"
     
     route {
-        //associated subnet can reach everywhere
         cidr_block = "0.0.0.0/0" 
-        //CRT uses this IGW to reach internet
         gateway_id = "${aws_internet_gateway.test-igw.id}" 
     }
     
